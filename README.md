@@ -1,22 +1,35 @@
-# Open-Source Audit: LibreOffice on Fedora 43
+# Open-Source Audit: LibreOffice (WSL - Ubuntu)
 
-**Student Name:** PRIYANSHU VASHISTH </br>
-**Roll Number:** 24BCE10360   </br>
-**Course:** Open-Source Software  </br>
-**Date:** March 2026
+| Field         | Details                       |
+|---------------|-------------------------------|
+| Student Name  | Priyanshu Vashisth            |
+| Roll Number   | 24BCE10360                    |
+| Course        | Open-Source Software          |
+| Date          | March 2026                    |
+
+---
 
 ## Chosen Software
-LibreOffice — A free and open-source office suite, developed by The Document Foundation.
+
+**LibreOffice** — A free and open-source office suite developed by [The Document Foundation](https://www.documentfoundation.org/).
+
+---
 
 ## System Details
-- Distribution: Fedora 43
-- Kernel: $(priyanshu -r)
-- LibreOffice Version: 26.2.0.3
+
+| Property            | Value                                      |
+|---------------------|--------------------------------------------|
+| Environment         | WSL (Windows Subsystem for Linux)          |
+| Distribution        | Ubuntu (WSL)                               |
+| Kernel              | Run `uname -r` to check                    |
+| LibreOffice Version | Run `libreoffice --version` to check       |
+
+---
 
 ## File Structure
-GitHub Repository Structure
-```bash
-oss-audit-24BCE10303/
+
+```
+oss-audit-24BCE10360/
 ├── README.md
 ├── Project_Report.pdf
 ├── scripts/
@@ -31,6 +44,7 @@ oss-audit-24BCE10303/
     ├── script3_run.png
     ├── script4_run.png
     └── script5_run.png
+```
 
 ---
 
@@ -93,4 +107,3 @@ sudo apt install libreoffice
 ## Conclusion
 
 This project performs a complete audit of **LibreOffice** using shell scripting in a WSL Ubuntu environment, covering system identity, package inspection, disk usage, log analysis, and manifesto generation.
-
