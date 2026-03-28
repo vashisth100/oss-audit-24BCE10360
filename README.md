@@ -1,28 +1,34 @@
 # Open-Source Audit: LibreOffice (WSL - Ubuntu)
 
-**Student Name:** PRIYANSHU VASHISTH  
-**Roll Number:** 24BCE10360  
-**Course:** Open-Source Software  
-**Date:** March 2026  
+| Field         | Details                        |
+|---------------|-------------------------------|
+| Student Name  | Priyanshu Vashisth            |
+| Roll Number   | 24BCE10360                    |
+| Course        | Open-Source Software          |
+| Date          | March 2026                    |
 
 ---
 
 ## Chosen Software
-LibreOffice — A free and open-source office suite developed by The Document Foundation.
+
+**LibreOffice** — A free and open-source office suite developed by [The Document Foundation](https://www.documentfoundation.org/).
 
 ---
 
 ## System Details
-- Environment: WSL (Windows Subsystem for Linux)
-- Distribution: Ubuntu (WSL)
-- Kernel: $(uname -r)
-- LibreOffice Version: (Check using `libreoffice --version`)
+
+| Property            | Value                                      |
+|---------------------|--------------------------------------------|
+| Environment         | WSL (Windows Subsystem for Linux)          |
+| Distribution        | Ubuntu (WSL)                               |
+| Kernel              | Run `uname -r` to check                   |
+| LibreOffice Version | Run `libreoffice --version` to check       |
 
 ---
 
 ## File Structure
 
-```bash
+```
 oss-audit-24BCE10360/
 ├── README.md
 ├── Project_Report.pdf
@@ -40,42 +46,65 @@ oss-audit-24BCE10360/
     └── script5_run.png
 ```
 
-## Scripts Description
-
-| Script | Purpose | Key Concepts |
-|--------|---------|--------------|
-| script1_system_identity.sh | System information report | Variables, command substitution |
-| script2_package_inspector.sh | Check LibreOffice installation | rpm queries, case statements |
-| script3_disk_auditor.sh | Directory permissions audit | For loops, arrays, permissions |
-| script4_log_analyzer.sh | Log file error analysis | While read loops, grep, counters |
-| script5_manifesto_generator.sh | Interactive philosophy generator | User input, file writing |
+---
 
 ## How to Run
 
-### Prerequisites
-- Fedora 43 (or any Linux distribution with Bash)
-- LibreOffice installed (`sudo dnf install libreoffice`)
+**Step 1:** Open WSL (Ubuntu)
 
-### Run Scripts
+**Step 2:** Navigate to the scripts folder
 ```bash
-# Make scripts executable
-chmod +x scripts/*.sh
-
-# Run each script
-./scripts/script1_system_identity.sh
-./scripts/script2_package_inspector.sh
-./scripts/script3_disk_auditor.sh
-./scripts/script4_log_analyzer.sh /var/log/messages
-./scripts/script5_manifesto_generator.sh
+cd /mnt/d/scripts
 ```
 
-## Dependencies
--	bash (built-in)
--	rpm (Fedora/RHEL package manager)
--	grep, awk, cut (standard Unix utilities)
-  
-## Notes
-All scripts are tested on Fedora 43. For other distributions, adjust package manager commands.
-This completes the full LibreOffice Audit project for Fedora 43. All scripts are ready to run, and the report provides comprehensive coverage of the origin story, license analysis, ethical reflections, Linux footprint, ecosystem mapping, and comparison with proprietary alternatives.
+**Step 3:** Fix Windows line endings (if scripts were created on Windows)
+```bash
+sed -i 's/\r$//' *.sh
+```
 
+**Step 4:** Grant execute permissions
+```bash
+chmod +x *.sh
+```
+
+**Step 5:** Run the scripts
+```bash
+./script1_system_identity.sh
+./script2_package_inspector.sh
+./script3_disk_auditor.sh
+./script4_log_analyzer.sh
+./script5_manifesto_generator.sh
+```
+
+---
+
+## LibreOffice Installation (Optional)
+
+If LibreOffice is not already installed, run:
+```bash
+sudo apt update
+sudo apt install libreoffice
+```
+
+---
+
+## Dependencies
+
+- `bash`
+- `dpkg`
+- `grep`, `awk`, `sed`, `cut`
+
+---
+
+## Notes
+
+- All scripts are executed using **WSL Ubuntu**.
+- Fedora-specific commands have been replaced with their **Ubuntu/Debian equivalents**.
+- If scripts were created in Windows, run `sed -i 's/\r$//' *.sh` before executing to remove carriage returns.
+
+---
+
+## Conclusion
+
+This project performs a complete audit of **LibreOffice** using shell scripting in a WSL Ubuntu environment, covering system identity, package inspection, disk usage, log analysis, and manifesto generation.
 
